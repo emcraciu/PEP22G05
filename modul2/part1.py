@@ -26,6 +26,17 @@ print(result)
 print('Emanuel', 'Ion', 'Illia')
 
 
+# casting
+# result = 'abcd'
+# result = int(result)
+# print(result)
+
+result = 10  # comment
+result = str(result)
+print(type(result))
+
+
+
 
 
 
