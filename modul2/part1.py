@@ -56,3 +56,18 @@ print(a is b)
     #0123456
 a = 'my_text'
 print(a[1])
+print(a[1:3])
+print(a[1:6])
+print(a[1:])
+print(a[:6])
+print(a[:6:3])
+
+    #-7-6-5-4-3-2-1
+#a  ' m y _ t e x t'
+a = 'my_text'
+print(a[-1])
+print(a[-6:-1])
+print(a[-1:-6:-3])
+
+b = 'This is may reversed text'
+
