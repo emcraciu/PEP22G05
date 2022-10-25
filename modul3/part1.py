@@ -50,24 +50,42 @@
 # else:
 #     print('a is False')
 
-# For loops
-
-a = 'my_string'
-a.__iter__()
-for i in a:
-    print(i)
-
-
-# a = 100
-# a.__iter__()
+# # For loops
 #
+# a = 'my_string'
+# a.__iter__()
 # for i in a:
 #     print(i)
+#
+#
+# # a = 100
+# # a.__iter__()
+# #
+# # for i in a:
+# #     print(i)
+#
+# result = range(10)
+# print(result)
+# print(type(result))
+# print(result.__iter__())
+#
+# for i in result:
+#     print(i)
 
-result = range(10)
-print(result)
-print(type(result))
-print(result.__iter__())
+# while loop
+# a = 100
+# while a < 200:
+#     print('TO iNFINITY')
+#     a += 1
+#     if a % 101:
+#         break
+#     print('after break')
 
-for i in result:
-    print(i)
+# a = 2
+# print(2 <= a <= 5)
+#
+# response = int(input('select 1 to 5'))
+# while not (1 <= response <= 5):
+#     response = int(input('select 1 to 5'))
+
+
