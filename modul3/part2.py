@@ -115,3 +115,25 @@ my_dict.__iter__()
 
 for item in my_dict:  # keys are iterated
     print(item)
+
+print("listing values")
+
+for item in my_dict.values():  # values are iterated
+    print(item)
+
+print("listing keys")
+for item in my_dict.keys():  # keys are iterated
+    print(item)
+
+print("listing items")
+for item in my_dict.items():  # items are iterated
+    print(item)
+
+print("listing items")
+for item in my_dict.items():  # items are iterated
+    print(item)
+
+print("listing items in separate variables")
+for key, value in my_dict.items():  # items are iterated
+    print(f"key {key}, value {value}")
+
