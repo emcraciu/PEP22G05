@@ -38,34 +38,59 @@
 # All of this will be in a function .
 # """
 
-my_tuple = (1, 2, 3)
-print(my_tuple)
+# my_tuple = (1, 2, 3)
+# print(my_tuple)
+#
+# my_tuple = 1, 2, 3
+# print(type(my_tuple))
+#
+# my_tuple = 1,
+# print(type(my_tuple))
+#
+# a = 5
+# b = 3
+# a, b = b, a
+# print(a, b)
+#
+# # unpack variables in tuple
+#
+# a = 5
+# b = 3
+# c = 7
+# d = 11
+# # f = 13
+# a, *var, d = d, c, b, a
+# print(a, d)
+# print(var)
+#
+#
+# def test_function(*args, **kwargs):
+#     print('Args:', args)
+#     print('Kwargs:', kwargs)
+#
+#
+# test_function(1, 2, 3, 4, 5, {'1': 2}, end='\n', next=(123,))
+# #test_function(1, 2, 3, 4, 5, *(6, 7), **{'a': 2}, end='\n', next=(123,))
 
-my_tuple = 1, 2, 3
-print(type(my_tuple))
+# exception
 
-my_tuple = 1,
-print(type(my_tuple))
-
-a = 5
-b = 3
-a, b = b, a
-print(a, b)
-
-# unpack variables in tuple
-
-a = 5
-b = 3
-c = 7
-d = 11
-#f = 13
-a, *var, d = d, c, b, a
-print(a, d)
-print(var)
+# print(1 / 0)
 
 
-def test_function(*args, **kwargs):
-    print('Args:',args)
-    print('Kwargs:',kwargs)
+def div(number1, number2):
+    result = 'infinit'
+    try:
+        result = number1 / number2
+    except TypeError:
+        print('not possible for string')
+        # return None
+        result = None
+    except ZeroDivisionError:
+        print('not possible do divide by 0')
+    except:
+        raise
+    return result
 
-test_function(1,2,3,4,5, {1: 2}, end='\n', next=(123,))
+
+print(div(1, 0))
+print(div('1', 10))
