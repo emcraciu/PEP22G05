@@ -4,5 +4,6 @@ def factorial(limit):
         result *= i
     return result
 
-
-print('Print from module', factorial(5))
+print(__name__)
+if __name__ == "__main__":
+    print('Print from module', factorial(5))
