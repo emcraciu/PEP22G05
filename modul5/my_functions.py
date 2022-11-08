@@ -4,6 +4,8 @@ def factorial(limit):
         result *= i
     return result
 
+my_imported_var = 'Imported'
+
 print(__name__)
 if __name__ == "__main__":
     print('Print from module', factorial(5))
