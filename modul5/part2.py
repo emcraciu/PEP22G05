@@ -39,4 +39,3 @@ decrypted_result = ""
 for letter in encrypted_result:
     decrypted_result += chr(ord(letter) ^ 48)
 print(decrypted_result)
-
