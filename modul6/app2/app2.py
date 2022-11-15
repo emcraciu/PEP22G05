@@ -16,3 +16,14 @@ din vitța m#a av#ntu$%a!a. &@ia$ !i a&um, dupa a&#!t int#$va^
 n%u a&#^ p%t%p b$u!& d# bu&u$i#, uimi$# !i n#in&$#d#$# &a$# mi-a
 &ufundat &u t%tu^ mint#a.
 """
+
+"""
+! = s
+@ = h
+# = e
+$ = r
+^ = l
+% = o
+& = c
+* = k
+"""
