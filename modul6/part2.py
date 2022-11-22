@@ -57,11 +57,11 @@ def generate_local_secret(base):
 
 # this get's executed on first PC
 secret1 = generate_local_secret(base)
-print(secret1)
+print(secret1)  # no access to this
 
 # this get's executed on second PC
 secret2 = generate_local_secret(base)
-print(secret2)
+print(secret2)  # no access to this
 
 
 def generate_remote_secret(base, prime, secret):
@@ -87,15 +87,14 @@ print('Second computer has', local_secret2)
 
 assert local_secret2 == local_secret1
 
-
 # Text on first computer:
 my_message = "My message to encrypt"
 encrypted_result = ''
 for letter in my_message:
     encrypted_result += chr(ord(letter) ^ local_secret1)
-print(80*'#')
+print(80 * '#')
 print(encrypted_result)
-print(80*'#')
+print(80 * '#')
 
 # Text on second computer:
 decrypted_result = ""
