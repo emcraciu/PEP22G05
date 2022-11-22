@@ -27,3 +27,8 @@ $ = r
 & = c
 * = k
 """
+
+
+my_text= ";;;abcd..."
+
+print(my_text.strip('.;'))
