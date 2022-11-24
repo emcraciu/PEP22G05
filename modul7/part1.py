@@ -32,6 +32,8 @@ class Car():
         else:
             return False
 
+    def __str__(self):
+        return "abcd"
 
 
 
@@ -90,3 +92,5 @@ car2 = Car()
 print(car1 == car2)
 car1.wheels = 5
 print(car1 == car2)
+
+print(car1) # print data, color, name (construction_date, color, name you define)
