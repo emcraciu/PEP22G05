@@ -25,6 +25,15 @@ class Car():
             result *= i
         return result
 
+    def __eq__(self, other):
+        print(self.construction_date, other.construction_date)
+        if self.color == other.color and self.wheels == other.wheels:
+            return True
+        else:
+            return False
+
+
+
 
 # car1 = Car('green')
 # print(type(car1))
@@ -72,4 +81,12 @@ print('Lights after start: ', car1.lights)
 
 print(Car.factorial(5))
 print(car1.factorial(5))
+#
 
+car1 = Car()
+time.sleep(0.1)
+car2 = Car()
+
+print(car1 == car2)
+car1.wheels = 5
+print(car1 == car2)
