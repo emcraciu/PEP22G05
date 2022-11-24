@@ -9,12 +9,13 @@ class Haine:
         self.stoc = stoc
 
     def __str__(self):
-        f = f"\n -------------- " \
+        f = f"\n {20 * '='}" \
             f"\n{self.__class__.__name__} " \
-            f"\n -------------- " \
+            f"\n {20 * '='}" \
             f"\n Nume = {self.nume} " \
             f"\n Pret = {self.pret} " \
-            f"\n Stoc = {self.stoc}"
+            f"\n Stoc = {self.stoc}" \
+            f"\n {20 * '-'}"
         return f
 
 class Accesorii:
@@ -26,13 +27,14 @@ class Accesorii:
         self.material = material
 
     def __str__(self):
-        f = f"\n -------------- " \
+        f = f"\n {20 * '='}" \
             f"\n{self.__class__.__name__} " \
-            f"\n -------------- " \
+            f"\n {20 * '='}" \
             f"\n Nume = {self.nume} " \
             f"\n Pret = {self.pret} " \
             f"\n Stoc = {self.stoc}" \
-            f"\n Material = {self.material}"
+            f"\n Material = {self.material}" \
+            f"\n {20 * '-'}"
         return f
 
 
