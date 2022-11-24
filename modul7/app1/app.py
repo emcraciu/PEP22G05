@@ -3,7 +3,7 @@ class Haine:
     pret = 0
     stoc = 0
 
-    def __init__(self, nume, pret, stoc):
+    def __init__(self, nume, pret, stoc, **kwargs):
         self.nume = nume
         self.pret = pret
         self.stoc = stoc
@@ -18,9 +18,10 @@ class Haine:
             f"\n {20 * '-'}"
         return f
 
+
 class Accesorii:
 
-    def __init__(self, nume, material, pret, stoc):
+    def __init__(self, nume, pret, stoc, material='aur', **kwargs):
         self.nume = nume
         self.pret = pret
         self.stoc = stoc
@@ -45,4 +46,3 @@ if __name__ == '__main__':
     print(bratara.material)
     print(bluze)
     print(bratara)
-
