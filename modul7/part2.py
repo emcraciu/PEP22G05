@@ -34,6 +34,9 @@ class A:
     attr_A = 'A'
     custom = "my_custom_text"
 
+    def my_method(self):
+        print(self.custom)
+
 
 class B(A):
     attr_B = 'B'
@@ -75,3 +78,6 @@ print(c.attr_B)
 print(c.attr_C)
 print(c.custom)
 print(c.attr_D)
+
+c.my_method()
+a.my_method()
