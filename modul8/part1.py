@@ -44,53 +44,70 @@ new_iterator = my_iterator.__iter__()
 print(id(new_iterator), id(my_iterator))
 
 print(my_iterator.__next__())
-#print(next(my_iterator))
+# print(next(my_iterator))
 print(next(new_iterator))
 # print(next(my_iterator))
 
-print("#"* 80)
+print("#" * 80)
+
 
 # generator functions -> return generators
-# def my_generator(number):
-#     return ??
+def my_generator(number):
+    for i in range(number):
+        yield i
+    yield number + 1
+
+print(type(my_generator))
+my_gen_obj = my_generator(10)
+print(type(my_gen_obj))
+print(my_gen_obj.__next__())
+print(my_gen_obj.__next__())
+print(my_gen_obj.__next__())
+for i in range(7):
+    print('in for loop', my_gen_obj.__next__())
+
+my_new_gen = (i for i in range(10))
+print(my_new_gen)
+for i in range(10):
+    print('in new for loop', my_new_gen.__next__())
 
 
-# Iterators classes - return iterators
-
+# # Iterators classes - return iterators
+#
+# # class MyIterator:
+# #
+# #     def __init__(self, number):
+# #         self.number = list(range(number))
+# #
+# #     def __next__(self):
+# #         try:
+# #             return self.number.pop(0)
+# #         except IndexError:
+# #             raise StopIteration
+#
+#
 # class MyIterator:
 #
 #     def __init__(self, number):
-#         self.number = list(range(number))
+#         self.number = number
+#         self.counter = -1
+#
+#     def __iter__(self):
+#         return self
 #
 #     def __next__(self):
-#         try:
-#             return self.number.pop(0)
-#         except IndexError:
+#         self.counter += 1
+#         if self.counter == self.number:
 #             raise StopIteration
-
-
-class MyIterator:
-
-    def __init__(self, number):
-        self.number = number
-        self.counter = -1
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        self.counter += 1
-        if self.counter == self.number:
-            raise StopIteration
-        return self.counter
-
-my_iterator = MyIterator(3)
-print(my_iterator.__next__())
-print(my_iterator.__next__())
+#         return self.counter
+#
+#
+# my_iterator = MyIterator(3)
 # print(my_iterator.__next__())
-new_iterator = my_iterator.__iter__()
-print(id(new_iterator), id(my_iterator))
-
-
-for i in my_iterator:
-    print(i)
+# print(my_iterator.__next__())
+# # print(my_iterator.__next__())
+# new_iterator = my_iterator.__iter__()
+# print(id(new_iterator), id(my_iterator))
+#
+# for i in my_iterator:
+#     print(i)
