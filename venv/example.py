@@ -1,7 +1,7 @@
 class MyObj():
     attr1 = "a"
 
-    def __init__(self, value):
+    def __init__(self, value: int):
         self.attr1 = value
 
     def __lt__(self, other):

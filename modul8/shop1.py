@@ -23,3 +23,64 @@ Iterating the object will return all products in the shop ordered by expiration 
    c) 5p: class documentation for all classes
    d) 5p: method documentation for all methods
 """
+import datetime
+
+
+class ShopIterator:
+    """iterator for shop product"""
+
+    def __init__(self, produse: dict):
+        self.expiration_dates = []
+        for item in produse.items():
+            self.expiration_dates.append(item)
+        self.expiration_dates.sort(key=lambda x: x[1])
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.expiration_dates:
+            return self.expiration_dates.pop(0)
+        else:
+            raise StopIteration
+
+
+class Shop:
+    """class for tracking products"""
+    inventory = {}
+
+    def __init__(self):
+        pass
+
+    def add_product(self, nume, data, cantitate):
+        """adding a product"""
+        self.inventory.update({nume: [data, cantitate]})
+
+    def remove_product(self, nume, cantitate):
+        """removing a product"""
+        print(self.inventory[nume][1])
+        if self.inventory[nume][1] > cantitate:
+            self.inventory[nume][1] -= cantitate
+        else:
+            del self.inventory[nume]
+
+    def __iter__(self):
+        produse = {}
+        for key, value in self.inventory.items():
+            produse[key] = value[0]
+
+        return ShopIterator(produse)
+
+
+shop = Shop()
+shop.add_product('banane', datetime.datetime(2022, 7, 10), 50)
+print(shop.inventory)
+shop.remove_product('banane', 10)
+print(shop.inventory)
+# shop.remove_product('banane', 40)
+# print(shop.inventory)
+shop.add_product('portocale', datetime.datetime(2022, 2, 5), 70)
+
+with open("examen.txt", "w") as file:
+    for item in shop:
+        file.write(str(item) + "\n")
