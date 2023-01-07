@@ -1,6 +1,6 @@
 """
 A production facility needs an iterable object to keep track off car warranty.
-Each car have a int serial and datetime object for when he the car was produced
+Each car have a int serial and datetime object for when the car was produced
 Iterating the object will return all cars that are still covered by 3 years warranty (serial, <timedelta>)
 1) 40p: Definition
     a) 10p: Basic class structure of objects
